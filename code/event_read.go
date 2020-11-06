@@ -50,7 +50,7 @@ func main() {
 			Key   [32]byte
 			Value [32]byte
 		}{}
-		err := contractAbi.Unpack(&event, "ItemSet", vLog.Data)
+		err := contractAbi.UnpackIntoInterface(&event, "ItemSet", vLog.Data)
 		if err != nil {
 			log.Fatal(err)
 		}
